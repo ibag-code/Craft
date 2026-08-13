@@ -1,0 +1,678 @@
+:root {
+    --bg-color: #F5F5F5;
+    --craft-black: #26282C;
+    --craft-white: #FFFFFF;
+    --border: #D2D3D7;
+
+    --craft-bc: #66217E;
+    --craft-bc-light: #F0E9F2;
+    --craft-bc-light-2: #E8DEEC;
+    --craft-bc-light-3: #D0BAD7;
+
+    --text-colour: #6D717F;
+
+    --danger: #FF383C;
+    --danger-light: #FFEBEC;
+    --danger-light-2: #FFE1E2;
+    --danger-light-3: #FFC1C3;
+    --danger-dark: #73191B;
+
+    --success: #34C759;
+    --success-light: #EBF9EE;
+    --success-light-2: #E1F7E6;
+    --success-light-3: #C0EECC;
+    --success-dark: #175A28;
+
+    --warning: #FFCC00;
+    --warning-light: #FFFAE6;
+    --warning-light-2: #FFF7D9;
+    --warning-light-3: #FFEFB0;
+    --warning-dark: #735C00;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+    text-decoration: none;
+    color: var(--craft-white);
+}
+
+body {
+    height: fit-content;
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--craft-black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 999;
+    border-bottom: 1px solid #41444C;
+}
+
+.craft-logo-head{ 
+    width: 123px;
+    height: 38px;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 28px;
+    height: fit-content;
+
+}
+
+.nav-btn {
+    font-family: inter;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-button {
+    width: fit-content;
+    height: fit-content;
+    color: var(--craft-white);
+    background-color: var(--craft-bc);
+    font-family: inter;
+    font-weight: normal;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 14px 20px;
+    border-radius: 12px;
+}
+
+.cta-button-outline {
+    border: 0.5px var(--craft-white) solid;
+    border-radius: 12px;
+    color: var(--craft-white);
+    padding: 14px 20px;
+    font-family: inter;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--craft-black);
+    padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero-craft-bg {
+    position: absolute;
+    left: 0px;
+    top: 30%;
+    width: 60vw;
+}
+
+.shadow-effect {
+    height: 500px;
+    width: 500px;
+    background-color: #D0BAD7;
+    position: absolute;
+    right: 200px;
+    top: 300px;
+    filter: blur(900px);
+}
+
+.content-container {
+    position: relative;
+    left: 60px;
+    z-index: 72;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 760px;
+    height: 100%;
+    width: 100%;
+  
+    justify-content: center;
+    align-content: start;
+    align-items: start;
+    gap: 32px;
+    
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    top: 28px;
+
+    width: 70vw;
+    max-width: 700px;
+    min-width: 580px;
+
+    z-index: 50;
+    }
+
+.faktum-text {
+  font-family: "Faktum", Arial, sans-serif;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--craft-white);
+}
+
+.faktum-text span {
+  display: block;
+  white-space: nowrap;
+}
+
+.sub-heading {
+    font-family: inter;
+    font-weight: 200px;
+    font-size: 16px;
+    color: var(--bg-color);
+}
+
+.cta-container-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    align-content: start;
+    gap: 12px;
+    width: 100%;
+}
+
+.available-project {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 60px; 
+    width: 100%;
+    gap: 32px;
+}
+
+.available-project-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50vw;
+    max-width: 745px;
+    min-width: 500px;
+    overflow: hidden;
+}
+
+.project-header {
+    font-family: "Faktum";
+    font-size: 40px;
+    font-weight: 600px;
+    color: var(--craft-black);
+
+}
+
+.project-subheading {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+.flex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 32px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--bg-color);
+    padding: 12px;
+    border-radius: 12px;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    }
+
+.project-image {
+    height: 300px;
+    width: 403px;
+}
+
+.location-tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    font-family: "inter";
+    font-size: 12px;
+    color: var(--text-colour);
+    font-weight: 600;
+}
+
+.status-tag {
+    display: flex;
+    flex-direction: row;
+    padding: 6px 12px;
+    gap: 10px;
+    background-color: var(--success-light-2);
+    border-radius: 999px;
+    justify-content: center;
+    align-items: center;
+    font-family: "inter";
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--success-dark);
+}
+
+.status-dot {
+    background-color: var(--success);
+    height: 10px;
+    width: 10px;
+    position: relative;
+    z-index: 10;
+    border-radius: 999px;
+}
+
+
+.project-name {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--craft-black);
+}
+
+.project-price {
+    font-family: "inter";
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--craft-black);
+}
+
+.image-feature {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 100%;
+    border-left: 1px  solid var(--border) ;
+
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 8px;
+}
+
+
+.feature-content-active {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  gap: 8px;
+
+  border-left: 4px solid var(--craft-bc);
+
+  margin-left: -2px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature-title {
+    font-family: "faktum";
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.feature-subheading {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+
+.feature-image {
+    width: 44vw;
+    height: 100%;
+}
+
+
+.how-flex-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.how-project-container {
+    /* Every card takes 2 columns */
+    grid-column: span 2;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background-color: var(--bg-color);
+    padding: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+    /* Push the 4th card to the center on second row */
+.how-project-container:nth-child(4) {
+    grid-column: 2 / span 2;
+    }
+
+    /* 5th card stays beside it */
+.how-project-container:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+
+.about-heading {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--craft-black);
+}
+
+.about-subheading {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 60px;
+    width: 100%;
+
+}
+
+.faq-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+
+}
+
+.faq-text {
+    font-family: "faktum";
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+    border-radius: 12px;
+    background-color: var(--bg-color);
+}
+
+.accordion i {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-colour);
+}
+
+.accordion-question {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--craft-black);
+    width: 100%;
+    padding: 100px 60px;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.brand-side-and-footer-coloumn {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;    
+}
+
+.brand-goal {
+    display: flex;
+    flex-direction: column;
+    width: 36vw;
+
+}
+
+.craft-foot-logo {
+    font-family: "faktum";
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--craft-white);
+
+}
+
+.craft-goal {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--border);
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.link-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.link-title {
+    font-family: "faktum";
+    font-size: 20px;
+    color: var(--craft-white);
+    font-weight: 400;
+}
+
+.foot-nav-container {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 12px;
+    height: fit-content;
+}
+
+.foot-nav-btn {
+    font-family: inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--border);
+}
+
+.copyright-and-social-media {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.copyright-text {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--border);
+}
+
+.social-media-icon {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 12px;
+}
+
+.social-media-icon i {
+  width: 50px;
+  height: 50px;
+  border: 1px solid var(--text-colour);
+  color: var(--craft-white);
+  border-radius: 25px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.big-craft-logo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.shadow-effect-foot {
+    height: 500px;
+    width: 500px;
+    background-color: #D0BAD7;
+    position: absolute;
+    bottom: -50px;
+
+    filter: blur(900px);
+} 
