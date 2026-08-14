@@ -8,6 +8,7 @@
     --craft-bc-light: #F0E9F2;
     --craft-bc-light-2: #E8DEEC;
     --craft-bc-light-3: #D0BAD7;
+    --craft-dark: #2E0F39;
 
     --text-colour: #6D717F;
 
@@ -120,6 +121,15 @@ header {
     font-weight: normal;
 }
 
+.nav-btn:hover {
+    text-decoration: underline;
+    color: var(--craft-bc-light-3);
+}
+.nav-btn:active {
+    text-decoration: underline;
+    color: var(--craft-bc);
+}
+
 .cta-container {
     display: flex;
     flex-direction: row;
@@ -144,6 +154,17 @@ header {
     border-radius: 12px;
 }
 
+.cta-button:hover {
+    background-color: #E8DEEC;
+    color: #66217E;
+}
+
+
+.cta-button:active {
+    background-color: #E8DEEC;
+    color: var(--craft-dark);
+}
+
 .cta-button-outline {
     border: 0.5px var(--craft-white) solid;
     border-radius: 12px;
@@ -155,6 +176,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cta-button-outline:hover {
+    background-color: var(--craft-bc-light-3);
+    color: var(--craft-bc);
 }
 
 
@@ -288,7 +314,7 @@ header {
 
 .project-subheading {
     font-family: "inter";
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-colour);
 }
@@ -307,27 +333,79 @@ header {
 
 
 .project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    background-color: var(--bg-color);
-    padding: 12px;
-    border-radius: 12px;
+  width: 100%;
+  height: 420px;
+  background-color: var(--bg-color);
+  border-radius: 12px;
+  padding: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 
+.normal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: none;
+}
+
+
+.hover-card {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+/* Hover the parent */
+.project-container:hover .normal-card {
+  display: none;
+}
+
+
+.project-container:hover .hover-card {
+  display: flex;
+}
+
+.cta-button-hover {
+    width: 100%;
+    height: fit-content;
+    color: var(--craft-white);
+    background-color: var(--craft-bc);
+    font-family: inter;
+    font-weight: normal;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 14px 20px;
+    border-radius: 12px;
+}
 .project-image {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
     display: block;
-    }
-
-.project-image {
-    height: 300px;
-    width: 403px;
 }
+
+.hover-card .project-image {
+  height: 240px;
+  width: 100%;
+}
+
+
 
 .location-tag {
     display: flex;
