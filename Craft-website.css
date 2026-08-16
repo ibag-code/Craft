@@ -481,6 +481,8 @@ header {
     flex-direction: column;
     padding: 12px 16px;
     gap: 8px;
+    margin-left: -2px;
+    z-index: 2;
 }
 
 
@@ -490,11 +492,14 @@ header {
   padding: 12px 16px;
   gap: 8px;
 
-  border-left: 4px solid var(--craft-bc);
 
   margin-left: -2px;
   position: relative;
   z-index: 2;
+}
+
+.active {
+    border-left: 4px solid var(--craft-bc);
 }
 
 .feature-title {
