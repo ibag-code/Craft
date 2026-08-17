@@ -1,9 +1,4 @@
 
-
-
-
-
-
 const featureTab = document.querySelectorAll(".feature-content");
 const tabImage = document.querySelector(".feature-image");
 
@@ -18,11 +13,13 @@ function tabDisplay (index) {
     featureTab.forEach((tabs) => {
 
         tabs.classList.remove("active")
-        console.log(tabs)
+        // console.log(tabs)
     })
     featureTab[index].classList.add("active")
 
     const newTabImage = featureTab[index].dataset.image;
+    // console.log(newTabImage)
+
     tabImage.src = newTabImage;
 
     currentIndex = index;
@@ -37,4 +34,75 @@ setInterval(()=> {
     }
 
     tabDisplay(nextIndex)
-},3000)
+},4000)
+
+
+
+
+
+
+//ACCORDION
+
+const tap = document.querySelectorAll(".accordion")
+const answer = document.querySelectorAll(".accordion-answer")
+
+// console.log (answer)
+
+
+  tap.forEach((tabPlus, index)=> {
+    tabPlus.addEventListener('click', () => {
+      const itisOpen = answer[index].classList.contains('accord-active')
+
+      answer.forEach((answerTab) => {
+      answerTab.classList.remove('accord-active')
+
+    })
+
+    if (!itisOpen) {
+      answer[index].classList.add('accord-active')
+    }
+
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const fuCk = document.getElementById("btn")
+// fuCk.addEventListener('click', () => {
+    
+//     const printfuck = fuCk.dataset.fuck;
+//     console.log(printfuck)
+
+// })
