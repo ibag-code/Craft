@@ -39,8 +39,6 @@ setInterval(()=> {
 
 
 
-
-
 //ACCORDION
 
 const tap = document.querySelectorAll(".accordion")

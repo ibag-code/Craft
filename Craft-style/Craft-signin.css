@@ -1,0 +1,416 @@
+:root {
+    --bg-color: #F5F5F5;
+    --craft-black: #26282C;
+    --craft-white: #FFFFFF;
+    --border: #D2D3D7;
+
+    --craft-bc: #66217E;
+    --craft-bc-light: #F0E9F2;
+    --craft-bc-light-2: #E8DEEC;
+    --craft-bc-light-3: #D0BAD7;
+    --craft-dark: #2E0F39;
+
+    --text-colour: #6D717F;
+
+    --danger: #FF383C;
+    --danger-light: #FFEBEC;
+    --danger-light-2: #FFE1E2;
+    --danger-light-3: #FFC1C3;
+    --danger-dark: #73191B;
+
+    --success: #34C759;
+    --success-light: #EBF9EE;
+    --success-light-2: #E1F7E6;
+    --success-light-3: #C0EECC;
+    --success-dark: #175A28;
+
+    --warning: #FFCC00;
+    --warning-light: #FFFAE6;
+    --warning-light-2: #FFF7D9;
+    --warning-light-3: #FFEFB0;
+    --warning-dark: #735C00;
+}
+
+input, textarea, select, button {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Faktum";
+  src: url("./fonts/Faktum-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+    text-decoration: none;
+    color: var(--craft-white);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    padding: 40px 100px;
+    gap: 80px;
+}
+
+.welcome-google-divider {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.craft-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.main-logo {
+    width: 120px;
+}
+
+.welcome-txt {
+    font-family: "faktum";
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.google-btn {
+    width: 100%;
+    background-color: var(--border);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "inter";
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--craft-black);
+    border-radius: 12px;
+}
+.google-btn:hover {
+
+    background-color: var(--craft-bc-light);
+}
+.google-btn img{
+    width: 42px;
+    height: 42px;
+}
+.hr-login-option {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0px 30px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+ hr {
+    flex: 1;
+    height: 1px;
+    background: #d4d4d8;
+}
+
+.divider-txt {
+    font-family: "inter";
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-colour);
+}
+
+.authentication-image {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.authentication-main-image {
+    display: flex;
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 28px;
+    height: fit-content;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.email-input {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+.input {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.input-fl {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 40px;
+    
+}
+
+.input-fl-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    gap: 8px;
+    justify-content: flex-start;
+    outline: none;
+}
+
+.input-fl-name input:-webkit-autofill,
+.input-fl-name input:-webkit-autofill:hover,
+.input-fl-name input:-webkit-autofill:focus,
+.input-fl-name input:-webkit-autofill:valid {
+  -webkit-box-shadow: 0 0 0 1000px var(--craft-bc-light) inset;
+  -webkit-text-fill-color: var(--craft-black);
+  border: 1px solid var(--craft-bc);
+}
+
+
+.input-fl-name input:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border) ;
+    outline: none;
+}
+
+.input-fl-name input:focus {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none;
+}
+.input-fl-name input:active {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none; 
+}
+.input-fl-name input:valid {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none; 
+}
+
+.input-icon input:-webkit-autofill,
+.input-icon input:-webkit-autofill:hover,
+.input-icon input:-webkit-autofill:focus,
+.input-icon input:-webkit-autofill:valid {
+  -webkit-box-shadow: 0 0 0 1000px var(--craft-bc-light) inset;
+  -webkit-text-fill-color: var(--craft-black);
+  border: 1px solid var(--craft-bc);
+}
+.input-icon input:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border) ;
+    outline: none;
+}
+
+.input-icon input:focus {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none;
+}
+.input-icon input:active {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none; 
+}
+.input-icon input:valid {
+    background-color: var(--craft-bc-light);
+    border: 1px solid var(--craft-bc);
+    outline: none; 
+}
+
+.input-fl-name label {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--craft-black);
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.input-fl-name input {
+
+    height: 50px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+
+
+.forget-password {
+    display: flex;
+    color: var(--craft-bc);
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    font-family: "inter";
+    font-size: 14px;
+    font-weight: 400;
+}
+.forget-password:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.email-label {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--craft-black);
+}
+
+.input label {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--craft-black);
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.input-icon input {
+    height: 50px;
+    width: 50vw;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+
+.input-icon i {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--text-colour);
+}
+
+
+.sign-cta {
+    width: 100%;
+    background-color: var(--craft-bc);
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--craft-white);
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.signup {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--craft-black);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup a {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--craft-bc);
+    margin-left: 10px;
+}
+.signup a:hover {
+    
+    text-decoration: underline;
+}
+
