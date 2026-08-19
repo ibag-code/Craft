@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-    <script src="Craft-signin.js" defer></script>
+    <script src="/Craft-script/Craft-signup.js" defer></script>
 </head>
 <body>
-    <div class="form">
+    <div class="main-page">
 
         <div class="craft-logo">
             <img src="../images/Craft-logo-icon.png" alt="craft-logo" class="main-logo">
@@ -40,7 +40,7 @@
                 
                 </div>
 
-                <form action="action_page.php">
+                <form id="sign-up-form">
 
                     <!-- First name and last name -->
                     <div class="input-fl">
@@ -71,7 +71,7 @@
                         <label for="password"> Password</label>
 
                         <div class="input-icon">
-                            <input type="password" name="password" placeholder="Enter your Password" id="password" required>
+                            <input type="password" name="password" placeholder="Enter your Password" id="password" required class="password">
 
                             <i class="hgi hgi-stroke hgi-rounded hgi-eye"></i>
                         </div>
@@ -82,12 +82,12 @@
                         <label for="re-enter-password">Re-enter-Password</label>
 
                         <div class="input-icon">
-                            <input type="password" name="password" placeholder="Enter your Password" id="re-enter-password" required>
+                            <input type="password" name="password" placeholder="Enter your Password" id="re-enter-password" required class="re-password">
                         </div>
                     </div>
 
 
-                    <a href="Signin-button" class="sign-cta"> Sign in </a>
+                    <button type="submit" class="sign-cta"> Sign in </button>
 
                 </form>
 
