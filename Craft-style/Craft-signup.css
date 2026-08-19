@@ -367,15 +367,10 @@ form {
     border: 1px solid var(--border);
 }
 
-.wrong {
-    height: 50px;
-    width: 50vw;
-    padding: 12px;
-    border-radius: 12px;
-    border: 1px solid var(--danger);
-    background-color: var(--danger-light);
-    width: 100%;
-    z-index: 100;
+/* more specificity || inactive state */
+.input-icon input.wrong {
+  border: 1px solid var(--danger);
+  background-color: var(--danger-light);
 }
 
 

@@ -26,17 +26,50 @@ formPage.addEventListener("submit", (event) => {
     if (password.value.length < 8) {
           alert('Password must be at least 8 characters long.');
           password.classList.add('wrong')
+          rePassword.classList.add('wrong')
           return;
     }
 
      if (password.value !== rePassword.value) {
           alert('Passwords do not match.');
+          password.classList.add('wrong')
+          rePassword.classList.add('wrong')
           return;
     }
 
 
     if (!emailAddress.value.includes('@')) {
         alert("Wrong Email Address");
+        emailAddress.classList.add('wrong')
         return;
     }
+
+
+
+      const users = JSON.parse(localStorage.getItem('users')) || [];
+
+      users.push({
+        email: emailAddress.value,
+        password: password.value
+        });
+
+      localStorage.setItem('users', JSON.stringify(users));
+
+      alert('User signed up successfully!');
+
+      setTimeout(() => {
+          window.location.href = 'Craft-website.html';
+      }, 1000);
+})
+
+
+const allInput = [ firstName, lastName, emailAddress, password, rePassword];
+
+allInput.forEach(input => {
+    input.addEventListener('input', () => {
+        if (input.classList.contain('wrong')) {
+            input.classList.remove('wrong');
+            input.value = "";
+        }
+    })
 })
