@@ -389,6 +389,7 @@ form {
     font-family: "inter";
     font-size: 20px;
     font-weight: 400;
+    cursor: pointer;
 }
 
 .signup {
@@ -414,3 +415,8 @@ form {
     text-decoration: underline;
 }
 
+/* more specificity || inactive state */
+.input-icon input.wrong {
+  border: 1px solid var(--danger);
+  background-color: var(--danger-light);
+}

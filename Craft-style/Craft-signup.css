@@ -354,6 +354,7 @@ form {
 
 .input-icon {
     display: flex;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     position: relative;
@@ -361,17 +362,29 @@ form {
 
 .input-icon input {
     height: 50px;
-    width: 50vw;
+    width: 100%;
     padding: 12px;
     border-radius: 12px;
     border: 1px solid var(--border);
+    overflow: hidden;
 }
 
-/* more specificity || inactive state */
-.input-icon input.wrong {
-  border: 1px solid var(--danger);
-  background-color: var(--danger-light);
+.input-icon div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 12px 12px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.input-icon div.open-eye {
+    display: none;
+    opacity: 0px;
+}
+
 
 
 .input-icon i {
@@ -380,6 +393,12 @@ form {
     cursor: pointer;
     font-size: 20px;
     color: var(--text-colour);
+}
+
+/* more specificity || inactive state */
+.input-icon input.wrong {
+  border: 1px solid var(--danger);
+  background-color: var(--danger-light);
 }
 
 
