@@ -59,5 +59,15 @@ signForm.addEventListener("submit", (event) => {
     alert("Invalid email or password");
   }
 
-   
 });
+
+const mainInput =[emailAddress, password];
+
+mainInput.forEach(main => {
+    main.addEventListener('click', () => {
+        if (main.classList.contains('wrong')) {
+            main.classList.remove('wrong')
+            main.value=""
+        }
+    })
+})
